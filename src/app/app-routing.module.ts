@@ -19,6 +19,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { TestComponent } from './test/test.component';
 import { AuthenticationGuard } from './authentication.guard';
+import { NotifyGuard } from './notify.guard';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -30,11 +31,11 @@ const routes: Routes = [
     {path:'event',component:EventComponent},
     {path:'cars',component:CarsComponent},
   { path: 'structureldirectives', component: StructuraldirectivesComponent },
-  {path:'create-user',component:CreateUserComponent},
+  {path:'create-user', canDeactivate:[NotifyGuard],component:CreateUserComponent},
   {path:'products',component:ProductsComponent},
   {path:'accounts',component:AccountsComponent},
   {path:'users',component:UsersComponent},
-  {path:'user-form',component:UserFormComponent},
+  {path:'user-form',canDeactivate:[NotifyGuard],component:UserFormComponent},
   {path:'vehicles',component:VehiclesComponent},
   {path:'memes',component:MemesComponent},
   {path:'emails',component:EmailsComponent},
