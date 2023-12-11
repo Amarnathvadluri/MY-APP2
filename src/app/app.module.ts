@@ -22,7 +22,8 @@ import { UserinfoComponent } from './userinfo/userinfo.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
-import { TestComponent } from './test/test.component'
+import { TestComponent } from './test/test.component';
+import { PricePipe } from './price.pipe'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TestComponent } from './test/test.component'
     AccountsComponent,
     CreateUserComponent,
     UserFormComponent,
-    TestComponent
+    TestComponent,
+    PricePipe
   ],
   imports: [
     BrowserModule,
