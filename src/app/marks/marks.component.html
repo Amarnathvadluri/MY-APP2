@@ -1,0 +1,18 @@
+<!-- <p>marks works!</p> -->
+<table>
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Grade</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students"> 
+            <td>{{student.name}}</td>
+            <td [ngStyle]="{'color':student.marks>=35 ? 'green' : 'red'}">{{student.marks}}</td>
+           <td [ngClass]="{'green':student.grade=='a','blue':student.grade=='b','red':student.grade=='fail'}">{{student.grade}}</td>
+            
+        </tr>
+    </tbody>
+</table>

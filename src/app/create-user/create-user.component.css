@@ -1,0 +1,17 @@
+label{
+
+    display: inline-block;
+    height: 15%;
+    width: 10%;
+}
+input{
+    display: inline-block;
+    height: 15px;
+    width: 150px;
+}
+form{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}

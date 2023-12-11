@@ -1,0 +1,83 @@
+<!-- <p>login works!</p> -->
+<!-- <p>amar works!</p>
+
+<h1>{{hello}}</h1>
+<input type="text" [id]="courseID">
+<button (click)="onclick()">click</button>
+<h3>{{alert}}</h3>
+<input type="text" [(ngModel)]="data">
+<button (click)="click()" >clear</button>
+
+<h1>{{data}}</h1>
+
+
+
+calculator
+<br>
+<label>number1</label>
+<input type="number" [(ngModel)]="num1"> 
+<br>
+<label>number2</label>
+<input type="number" [(ngModel)]="num2"> 
+<br>
+
+<button (click)="sum()">sum</button>
+<button (click)="mul()">mul</button>
+<h1>{{result}}</h1>
+<br><br>
+
+
+
+<!-- //Rectangle -->
+<!-- <br>
+<h1>Rectangle</h1>
+<label>length</label>
+<input type="number" [(ngModel)]="length"> 
+<br>
+<label>breadth</label>
+<input type="number" [(ngModel)]="breadth"> 
+<br> -->
+
+<!-- <button (click)="Area()">Area</button>
+<button (click)="perimeter()">perimeter</button>
+<h1>{{result1}}</h1>
+<br><br> -->
+
+<!-- //circle -->
+<!-- <br>
+<h1>circle</h1>
+<label>Radius:</label>
+<input type="number" [(ngModel)]="length1"> 
+<br>
+<button (click)="circlearea()">Area</button>
+<button (click)="circleperimeter()">perimeter</button>
+<h1>{{result2}}</h1>
+<br><br> -->
+
+
+<!-- BMI -->
+<!-- <br>
+<h1>BMI</h1>
+<label>height</label>
+<input type="number" [(ngModel)]="height"> 
+<br>
+<label>weight</label>
+<input type="number" [(ngModel)]="weight"> 
+<br>
+
+<button (click)="calculator()">calculator</button>
+
+<h1>{{result3}}</h1> -->
+<div class="parent">
+    <form [formGroup]="loginForm" >
+        <h1>Login form</h1>
+        <label for="">Email:</label>
+        <input type="email" formControlName="email">
+        <br>
+        <label for="">Password:</label>
+        <input type="password" formControlName="password">
+        <br>
+        <button (click)="login()">Login</button>
+        
+    </form>
+</div>

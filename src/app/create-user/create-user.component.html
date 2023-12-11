@@ -1,0 +1,25 @@
+<!-- <p>create-user works!</p> -->
+
+
+<h1>Create User Form</h1>
+
+<form [formGroup]="userForm">
+<label >model:</label>
+<input type="text" formControlName="model">
+<br>
+
+<label >Vehicle:</label>
+<input type="text"  formControlName="Vehicle">
+<br>
+<label >manufacturer:</label>
+<input type="text" formControlName="manufacturer">
+<br>
+<label >color:</label>
+<input type="text" formControlName="color">
+<br>
+<label >fuel:</label>
+<input type="text"  formControlName="fuel">
+<br><br>
+<button (click)="submit()">Submit</button>
+<br>
+</form>

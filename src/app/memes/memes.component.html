@@ -1,0 +1,12 @@
+<!-- <p>memes works!</p> -->
+
+
+<div *ngFor="let meme of memes">
+    <span> {{meme.id}}</span>
+    <span>{{meme.name}}</span>
+
+    <p>
+        <img src="{{meme.url}}" alt="" height="300px" width="300px">
+    </p>
+
+</div>

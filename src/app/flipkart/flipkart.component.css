@@ -1,0 +1,59 @@
+*{
+    background-color: white !important;
+}
+h1{
+    padding: 8px;
+    background-color:  rgb(76, 68, 238) !important;
+    color: white !important;
+}
+h3{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 100;
+}
+h5{
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 700;
+}
+h6{
+    text-transform: capitalize;
+    color: gray;
+    font-family: Roboto,Arial,sans-serif;
+    font-weight: 100;
+}
+.flipkartproducts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.items{
+    display: block;
+    height: 300px;
+    width: 200px;
+    border: 10px solid white;
+}
+.top{
+    height: 55%;
+    width: 100%;
+}
+.bottom{
+    height: 45%;
+    width: 100%;
+}
+span{
+    background-color: green !important;
+    border-radius: 4px;
+    color: white;
+    font-size: smaller;
+    padding: 2px;
+}
+/* span{
+    color: gray;
+    padding: 2px;
+} */
+.checked {
+    font-size: 10px;
+    
+    color:white;
+}

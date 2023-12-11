@@ -1,0 +1,55 @@
+.parent{
+    width: 100%;
+    height: 50%;
+    display: flex;
+}
+.product-right{
+    width: 50%;
+    height: 50%;
+}
+.child-table{
+    width: 100%;
+    height: 50%;
+}
+th{
+    width: 100px;
+    height:50px
+}
+td{
+    width: 250px;
+    height:30px;
+    text-align: center;
+}
+.delete{
+    background-color: red;
+    border-radius: 5px ;
+}
+.product-left > button{
+ background-color: green;
+ border-radius: 5px ;
+}
+.product-right >button{
+    color: whitesmoke;
+    background-color: rgb(0, 68, 255);
+    border-radius: 5px;
+}
+.product-right div > button{
+    background-color: gold;
+    border-radius: 5px ;
+    border: 3px solid gray;
+}
+.product-right section > button{
+    color: white;
+    background-color: rgb(5, 199, 243);
+    border-radius: 5px ;
+    border: 2px solid black;
+ 
+}
+
+.product-right main > button{
+    color: white;
+    background-color: gray;
+    border-radius: 5px ;
+    border: 2px solid black;
+ 
+}

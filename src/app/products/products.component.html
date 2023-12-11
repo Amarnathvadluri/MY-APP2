@@ -1,0 +1,79 @@
+<p>products works!</p>
+<div class="parent">
+    <div class="product-left">
+        <label for="">Name:</label>
+        <input type="text" placeholder="Enter name" [(ngModel)]="name">
+        <br> <br>
+        <label for="">Price:</label>
+        <input type="number" placeholder="Enter price" [(ngModel)]="price">
+        <br> <br>
+        <label for="">Rating:</label>
+        <input type="number" placeholder="Enter rating" [(ngModel)]="rating">
+        <br>
+        <label for="">FreeDelivery:</label>
+
+        <label for="">Yes</label>
+        <input type="radio" name="free" [(ngModel)]="delivery" value="yes">
+        <label for="">No</label>
+        <input type="radio" name="free" [(ngModel)]="delivery" value="no">
+        <br>
+        <button class="button-cart" (click)="addtocart()" >Add to cart</button>
+    </div>
+    <div class="product-right">
+        <input type="text" placeholder="Search anything" (keyup)="searchproducts()" [(ngModel)]="search">
+        <br> <br>
+        <button (click)="onlyfreedelivery()">Onlyfreedelivery</button>
+        <br> <br>
+        <div>
+            <button (click)="pricelowtohigh()">PriceLowtohigh</button>
+            <button (click)="pricehightolow()">pricehightolow</button>
+            <button (click)="Ratinghightolow()">Ratinghightolow</button>
+            <button (click)="Ratinglowtohigh()">RatinglowtoHigh</button>
+        </div>
+        <br>
+        <section>
+            <button (click)="ApplyDiscount()">Apply Discount</button>
+            <button (click)="ApplyDeliveryCharges()">Apply Delivery charges</button>
+        </section>
+        <br>
+       <main>
+        <button (click)="TotalPrice()">Total price</button>
+        <button (click)="Totalitems()">Total Cart Items</button>
+       </main>
+    
+        <h3>Total Price:{{totalprice}}</h3>
+        <h3>Total CartItems:{{totalitems}}</h3>
+
+        
+
+    </div>
+
+</div>
+<div class="child-table">
+   <table class="table" [(ngModel)]="products">
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>product name</th>
+            <th>price</th>
+            <th>rating</th>
+            <th>freedelivery</th>
+            <th>action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.rating}}</td>
+            <td>{{product.freeDel}}</td>
+            <td>
+                <button class="delete" (click)="delete(i)">Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+
+   </table>
+</div>

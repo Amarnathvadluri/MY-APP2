@@ -1,0 +1,62 @@
+<p>userinfo works!</p>
+<div  class="parent" *ngFor="let everyuser of userdetails">
+    <p ><img src="{{everyuser.image}}" alt=""></p>
+    <p>ID:{{everyuser.id}}</p>
+    <p>FirstName:{{everyuser.firstName}}</p>
+    <p>LastName:{{everyuser.lastName}}</p>
+    <p>MiddleName:{{everyuser.maidenName}}</p>
+    <p>Age:{{everyuser.age}}</p>
+    <p>Gender:{{everyuser.gender}}</p>
+    <p>email:{{everyuser.email}}</p>
+    <p>phone:{{everyuser.phone}}</p>
+    <p>username:{{everyuser.username}}</p>
+    <p>password:{{everyuser.password}}</p>
+    <p>birthDate:{{everyuser.birthDate}}</p>
+    <p>bloodGroup:{{everyuser.bloodGroup}}</p>
+    <p>eyeColor:{{everyuser.eyeColor}}</p>
+    <b>hair:</b>
+    <p>color:{{everyuser.hair.color}}</p>
+    <p>type:{{everyuser.hair.type}}</p>
+    <p>domain:{{everyuser.domain}}</p>
+    <p>ip:{{everyuser.ip}}</p>
+    <p>Address:</p>
+    <p>address:{{everyuser.address.address}}</p>
+    <p>city:{{everyuser.address.city}}</p>
+    <p>coordinates:</p>
+    <p>lat:{{everyuser.address.coordinates.lat}}</p>
+    <p>lng:{{everyuser.address.coordinates.lng}}</p>
+    <p>postalCode:{{everyuser.address.postalCode}}</p>
+    <p>state:{{everyuser.address.state}}</p>
+    <p>MacAddress:{{everyuser.macAddress}}</p>
+    <p>University:{{everyuser.university}}</p>
+    <p>Bank:</p>
+    <b>Bank:</b>
+            <p>CardExpire:{{everyuser.bank.cardExpire}}</p>
+            <p>CardNumber:{{everyuser.bank.cardNumber}}</p>
+            <p>CardType:{{everyuser.bank.cardtype}}</p>
+            <p>Currency:{{everyuser.bank.currency}}</p>
+            <p>Iban:{{everyuser.bank.iban}}</p>
+
+    
+        <b>Company:</b>
+        <h4>Address:</h4>
+        <p>Address:{{everyuser.company.address.address}}</p>
+        <p>City:{{everyuser.company.address.city}}</p>
+      
+            <b>Coordinates</b>
+            <p>Lattitude:{{everyuser.company.address.coordinates.lat}}</p>
+            <p>Longittude:{{everyuser.company.address.coordinates.lng}}</p>
+            <p>PostalCode:{{everyuser.company.address.postalCode}}</p>
+            <p>State:{{everyuser.company.address.state}}</p>
+            <p>Department:{{everyuser.company.department}}</p>
+            <p>Name:{{everyuser.company.name}}</p>
+            <p>Title:{{everyuser.company.title}}</p>
+      
+         <p>Ein:{{everyuser.ein}}</p>
+         <p>SSN:{{everyuser.ssn}}</p>
+         <p>UserAgent:{{everyuser.userAgent}}</p>
+
+
+
+</div>
+

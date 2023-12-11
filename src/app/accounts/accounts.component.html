@@ -1,0 +1,56 @@
+
+<input type="text" placeholder="search" (keypress)="getFilteredAccounts()" [(ngModel)]="term">
+<br>
+
+
+<label for="">Colunm</label>
+<select [(ngModel)] ="column">
+    <option >available_balance</option>
+    <option >account_name</option>
+</select>
+
+<label for="">Order</label>
+<select [(ngModel)] ="order">
+    <option >asc</option>
+    <option >desc</option>
+</select>
+
+<button (click)="sort()" >sort</button>
+<br>
+<select [(ngModel)]="pageno" >
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+</select>
+<button (click)="page()">page</button>
+<table border="1" >
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>AccountName</th>
+            <th>Balance</th>
+            <th>AccountNumber</th>
+            <th>City</th>
+            <th>ProfilePicture</th>
+
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor="let accounts of account">
+            <td>{{accounts.id}}</td>
+            <td>{{accounts.account_name}}</td>
+            <td>{{accounts.available_balance}}</td>
+            <td>{{accounts.account_number}}</td>
+            <td>{{accounts.city}}</td>
+         <td>
+            <img src="{{accounts.profie_picture}}" alt="">
+         </td>
+         <td>
+            <button (click)="delete(accounts.id)">delete</button>
+        </td>
+
+        </tr>
+    </tbody>
+</table>

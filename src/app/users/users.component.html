@@ -1,0 +1,56 @@
+<!-- <p>users works!</p> -->
+<input type="text" placeholder="search" (keypress)="getFilteredUsers()" [(ngModel)]="term">
+<br>
+
+
+<label for="">Colunm</label>
+<select [(ngModel)] ="column">
+    <option >fee</option>
+    <option >name</option>
+</select>
+
+<label for="">Order</label>
+<select [(ngModel)] ="order">
+    <option >asc</option>
+    <option >desc</option>
+</select>
+
+<button (click)="sort()" >sort</button>
+
+<select  [(ngModel)]="pageno">
+<option >1</option>
+<option >2</option>
+<option >3</option>
+<option >4</option>
+<option >5</option>
+</select>
+<button (click)="page()">Page</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>phone</th>
+            <th>fee</th>
+            <th>city</th>
+            <th>image</th>
+        </tr>
+    </thead>
+    <tbody >
+        <tr *ngFor="let user of users">
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.fee}}</td>
+            <td>{{user.city}}</td>
+            <td>
+                <img src="{{user.image}}" alt="">
+            </td>
+            <td> {{user.id}}</td>
+            <td>
+                <button (click)="delete(user.id)">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

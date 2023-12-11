@@ -1,0 +1,16 @@
+<!-- <p>emails works!</p> -->
+
+<table>
+    <thead>
+        <tr>
+            <th>s.no</th>
+            <th>Title</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let email of emails">
+            <td [ngClass]="{'black':email.completed==true, 'gray':email.completed==false}">{{email.id}}</td>
+            <td [ngClass]="{'black':email.completed==true, 'gray':email.completed==false}">{{email.title}}</td>
+        </tr>
+    </tbody>
+</table>

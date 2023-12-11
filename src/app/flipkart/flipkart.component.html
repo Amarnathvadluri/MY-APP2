@@ -1,0 +1,24 @@
+<!-- <p>flipkart works!</p> -->
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1>Flipkart</h1>
+<div class="flipkartproducts">
+    <div class="items" *ngFor="let item of flipkartitems">
+        <div class="top">
+            <img src="{{item.image}}" alt="" height="150px" width="150px">
+
+
+
+        </div>
+        <div class="bottom">
+            <h3>{{item.title}}</h3>
+            <h6>{{item.category}}</h6>
+            <span>{{item.rating.rate}}&nbsp;<span class="fa fa-star checked"></span></span>&nbsp;<span>{{item.rating.count}}</span>
+            <br>
+            <h4>&#8377;{{item.price}}</h4>
+            <h5>Free delivery</h5>
+        </div>
+    </div>
+   
+
+</div>

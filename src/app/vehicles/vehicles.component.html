@@ -1,0 +1,65 @@
+<!-- <p>vehicles works!</p> -->
+
+<!-- Filtering vehicles -->
+<input type="search" (keypress)="getFilteredUsers()" placeholder="search" [(ngModel)]="term">
+<br>
+
+<label >Column</label>
+<select [(ngModel)]="column">
+<option >id</option>
+<option >model</option>
+</select>
+
+<label >order</label>
+<select [(ngModel)]="order">
+<option >asc</option>
+<option >desc</option>
+</select>
+<button (click)="sort()">sort</button>
+
+<select  [(ngModel)]="pageno">
+    <option >1</option>
+    <option >2</option>
+    <option >3</option>
+    <option >4</option>
+    <option >5</option>
+    </select>
+    <button (click)="page()">Page</button>
+
+<table border="1">
+    <thead>
+        <tr>
+         <th>id</th>
+        <th>Vehicle</th>
+        <th>manufacturer</th>
+        <th>model</th>
+        <th>type</th>
+        <th>fuel</th>
+        <th>color</th>
+        <th>image</th>
+        <th>actions</th>
+        
+        
+    </tr>
+</thead>
+<tbody >
+     <tr *ngFor="let vehicle of vehicles">
+    <td>{{vehicle.id}}</td>
+    <td>{{vehicle.Vehicle}}</td>
+    <td>{{vehicle.manufacturer}}</td>
+    <td>{{vehicle.model}}</td>
+    <td>{{vehicle.type}}</td>
+    <td>{{vehicle.fuel}}</td>
+    <td>{{vehicle.color}}</td>
+    
+    
+    <td>
+        <img src="{{vehicle.image}}" alt="" width="200px" height="200px">
+    </td>
+    
+    <td>
+        <button (click)="delete(vehicle.id)">delete</button>
+    </td>
+</tr>
+</tbody>
+</table>
