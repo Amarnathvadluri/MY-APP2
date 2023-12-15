@@ -15,20 +15,25 @@ export class VehiclesService {
   getFilteredUsers(term:string):Observable<any>{
     return this._vehicles.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
   }
-  getSortedUser(column:string,order:string):Observable<any>{
+  getSortedvehicles(column:string,order:string):Observable<any>{
     return this._vehicles.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?sortBy="+column+"&order="+order);
 
   }
-  deleteUser(id:string):Observable<any>{
+  deletevehicles(id:string):Observable<any>{
     return this._vehicles.delete("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id)
   }
 
-  getPageUsers(pageno:number):Observable<any>{
+  getPagevehicles(pageno:number):Observable<any>{
     return this._vehicles.get(this.baseUrl+"?limit=10&page="+pageno);
   }
+  getvehicle(id:number):Observable<any>{
+    return this._vehicles.get(this.baseUrl+"/"+id);
+  }
 
-
-  createUser(data:any):Observable<any>{
+  createvehicles(data:any):Observable<any>{
     return this._vehicles.post(this.baseUrl+"/",data);
+  }
+  editVehicle(id: number, data: any): Observable<any> {
+    return this._vehicles.put(this.baseUrl + "/" + id, data);
   }
 }

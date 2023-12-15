@@ -23,7 +23,15 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserFormComponent } from './user-form/user-form.component';
 import { TestComponent } from './test/test.component';
-import { PricePipe } from './price.pipe'
+import { PricePipe } from './price.pipe';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { CreateAccountsComponent } from './create-accounts/create-accounts.component';
+import { AccountsDetailsComponent } from './accounts-details/accounts-details.component';
+import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+// import { ServeComponent } from './serve/serve.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +54,15 @@ import { PricePipe } from './price.pipe'
     CreateUserComponent,
     UserFormComponent,
     TestComponent,
-    PricePipe
+    PricePipe,
+    UserDetailsComponent,
+    CreateAccountsComponent,
+    AccountsDetailsComponent,
+    CreateVehicleComponent,
+    VehicleDetailsComponent,
+    ParentComponent,
+    ChildComponent,
+    // ServeComponent
   ],
   imports: [
     BrowserModule,

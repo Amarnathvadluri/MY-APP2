@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { VehiclesService } from '../vehicles.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicles',
@@ -12,13 +13,13 @@ export class VehiclesComponent {
   public term: string = "";
   public column: string = "";
   public order: string = "";
-  public pageno:number=0;
+  public pageno: number = 0;
   // public id:string="";
 
 
 
   public vehicles: any = [];
-  constructor(private _vehiclesservice: VehiclesService) {
+  constructor(private _vehiclesservice: VehiclesService, private _router: Router) {
 
     _vehiclesservice.getvehicles().subscribe(
       (data: any) => {
@@ -43,7 +44,7 @@ export class VehiclesComponent {
   }
 
   sort() {
-    this._vehiclesservice.getSortedUser(this.column, this.order).subscribe(
+    this._vehiclesservice.getSortedvehicles(this.column, this.order).subscribe(
       (data: any) => {
         this.vehicles = data;
 
@@ -54,8 +55,8 @@ export class VehiclesComponent {
       }
     )
   }
-  delete(id:string) {
-    this._vehiclesservice.deleteUser(id).subscribe(
+  delete(id: string) {
+    this._vehiclesservice.deletevehicles(id).subscribe(
       (data: any) => {
         alert("deleted successfully deleted");
         location.reload();
@@ -65,15 +66,21 @@ export class VehiclesComponent {
       }
     )
   }
-  page(){
-    this._vehiclesservice.getPageUsers(this.pageno).subscribe(
-      (data:any)=>{
-        this.vehicles=data;
+  page() {
+    this._vehiclesservice.getPagevehicles(this.pageno).subscribe(
+      (data: any) => {
+        this.vehicles = data;
       },
-      (err:any)=>{
+      (err: any) => {
         alert("Internal server error");
       }
     )
+  }
+  view(id: number) {
+    this._router.navigateByUrl("/dashboard/vehicle-details-/" + id);
+  }
+  edit(id: number) {
+    this._router.navigateByUrl("/dashboard/edit-vehicle/" + id);
   }
 
 }

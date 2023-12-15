@@ -1,25 +1,25 @@
 <!-- <p>create-user works!</p> -->
 
 
-<h1>Create User Form</h1>
+<h1 *ngIf="!id">Create User Form</h1>
+
+<h1 *ngIf="id">Edit User Form</h1>
 
 <form [formGroup]="userForm">
-<label >model:</label>
-<input type="text" formControlName="model">
-<br>
 
-<label >Vehicle:</label>
-<input type="text"  formControlName="Vehicle">
+
+<label >Name:</label>
+<input type="text"  formControlName="name">
 <br>
-<label >manufacturer:</label>
-<input type="text" formControlName="manufacturer">
+<label >Phone:</label>
+<input type="text" formControlName="phone">
 <br>
-<label >color:</label>
-<input type="text" formControlName="color">
+<label >City:</label>
+<input type="text" formControlName="city">
 <br>
-<label >fuel:</label>
-<input type="text"  formControlName="fuel">
+<label >Image:</label>
+<input type="text"  formControlName="image">
 <br><br>
-<button (click)="submit()">Submit</button>
+<button (click)="submit()">{{id ?'update': 'create'}}</button>
 <br>
 </form>

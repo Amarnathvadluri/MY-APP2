@@ -29,28 +29,33 @@
 <table border="1">
     <thead>
         <tr>
-            <th>id</th>
+           
             <th>name</th>
             <th>phone</th>
             <th>fee</th>
             <th>city</th>
             <th>image</th>
+            <th>id</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody >
         <tr *ngFor="let user of users">
-            <td>{{user.id}}</td>
+           
             <td>{{user.name}}</td>
             <td>{{user.phone}}</td>
-            <td>{{user.fee}}</td>
-            <td>{{user.city}}</td>
             <td>{{user.fee | price}}</td>
+            <td>{{user.city}}</td>
+           
             <td>
                 <img src="{{user.image}}" alt="">
             </td>
             <td> {{user.id}}</td>
             <td>
-                <button (click)="delete(user.id)">delete</button>
+                <button (click)="delete(user.id)">Delete</button>
+           
+                <button (click)="edit(user.id)">Edit</button>
+                <button (click)="view(user.id)">View</button>
             </td>
         </tr>
     </tbody>

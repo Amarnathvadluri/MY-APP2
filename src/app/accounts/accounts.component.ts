@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AccountsService } from '../accounts.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-accounts',
@@ -16,7 +17,8 @@ public pageno:number=0;
 
 
 
-constructor(private _accountService:AccountsService){
+constructor(private _accountService:AccountsService , private _router:Router){
+
   _accountService.getAccounts().subscribe(
     (data:any)=>{
       this.account=data;
@@ -26,6 +28,8 @@ constructor(private _accountService:AccountsService){
     }
   )
 }
+
+
 getFilteredAccounts(){
 
   
@@ -71,6 +75,12 @@ page(){
       alert("Internal server error");
     }
   )
+}
+view(id:number){
+  this._router.navigateByUrl("/dashboard/accounts-details/"+id);
+}
+edit(id:number){
+this._router.navigateByUrl("/dashboard/edit-accounts-details/"+id);
 }
 
 }

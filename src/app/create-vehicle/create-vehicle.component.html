@@ -1,0 +1,25 @@
+<p>create-vehicle works!</p>
+
+<h1 *ngIf="!id">Create Accounts Form</h1>
+
+<h1 *ngIf="id">Edit Accounts Form</h1>
+
+<form [formGroup]="createVehicleForm">
+    <label >AccountName</label>
+    <input type="text" formControlName="account_name">
+    <br>
+    <label >Balance</label>
+    <input type="text" formControlName="available_balance">
+    <br>
+    <label >AccountNumber</label>
+    <input type="text" formControlName="account_number">
+    <br>
+    <label >City</label>
+    <input type="text" formControlName="city">
+    <br>
+    <label >ProfilePicture</label>
+    <input type="text" formControlName="profie_picture">
+    <br>
+    <button (click)="submit()">{{id ?'update': 'create'}}</button>
+    <br>
+</form>

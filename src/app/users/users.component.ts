@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { UserService } from '../user.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-users',
@@ -16,7 +17,7 @@ export class UsersComponent {
 
 
 
-  constructor(private _userservice:UserService){
+  constructor(private _userservice:UserService, private _router:Router){
   }
   getFilteredUsers(){
     this._userservice.getFilteredUsers(this.term).subscribe(
@@ -62,6 +63,14 @@ export class UsersComponent {
           alert("internal server error");
         }
       )
+    }
+    view(id:number){
+      this._router.navigateByUrl("/dashboard/user-details/"+id);
+
+    }
+    edit(id:number){
+      this._router.navigateByUrl("/dashboard/edit-user/"+id);
+
     }
   
 

@@ -1,0 +1,7 @@
+<p>parent works!</p>
+<input type="text"[(ngModel)]="ap">
+
+
+<h1>BP:{{bp}}</h1>
+
+<app-child [ac]="ap" (bEvent)="catch($event)"></app-child>

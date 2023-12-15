@@ -33,6 +33,7 @@
             <th>AccountNumber</th>
             <th>City</th>
             <th>ProfilePicture</th>
+            <th>Actions</th>
 
         </tr>
 
@@ -48,8 +49,12 @@
             <img src="{{accounts.profie_picture}}" alt="">
          </td>
          <td>
-            <button (click)="delete(accounts.id)">delete</button>
+            <button (click)="delete(accounts.id)">Delete</button>
+
+            <button (click)="view(accounts.id)">View</button>
+            <button (click)="edit(accounts.id)">Edit</button>
         </td>
+
 
         </tr>
     </tbody>

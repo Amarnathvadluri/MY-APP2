@@ -31,4 +31,12 @@ export class UserService {
   createUser(data:any):Observable<any>{
     return this._httpClient.post(this.baseUrl+"/",data);
   }
+
+  getUser(id:number):Observable<any>{
+    return this._httpClient.get(this.baseUrl+"/"+id);
+  }
+  editUser(id:any,data:any):Observable<any>{
+    return this._httpClient.put (this.baseUrl+"/"+id,data);
+  }
+  
 }
